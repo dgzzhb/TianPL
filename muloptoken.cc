@@ -58,7 +58,7 @@ string *MulopToken::to_string()
   case MULOP_AND:
     attribute_name = new string ("AND");
     break;
-  case PUNC_NO_ATTR:
+  case MULOP_NO_ATTR:
     attribute_name = new string ("NO ATTRIBUTE");
     break;
   default:

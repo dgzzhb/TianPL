@@ -67,7 +67,7 @@ string *RelopToken::to_string()
   case RELOP_LE:
     attribute_name = new string ("<=");
     break;
-  case PUNC_NO_ATTR:
+  case RELOP_NO_ATTR:
     attribute_name = new string ("NO ATTRIBUTE");
     break;
   default:

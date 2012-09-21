@@ -58,7 +58,7 @@ string *AddopToken::to_string()
   case ADDOP_OR:
     attribute_name = new string ("OR");
     break;
-  case PUNC_NO_ATTR:
+  case ADDOP_NO_ATTR:
     attribute_name = new string ("NO ATTRIBUTE");
     break;
   default:
