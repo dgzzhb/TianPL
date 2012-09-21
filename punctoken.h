@@ -14,12 +14,12 @@ using namespace std;
 #include <string>
 
 typedef enum punc_attr { PUNC_SEMI = 200,
-						 PUNC_COLEN = 201,
+						 PUNC_COLON = 201,
 						 PUNC_COMMA = 202,
 						 PUNC_ASSIGN = 203,
 						 PUNC_OPEN = 204,
 						 PUNC_CLOSE = 205,
-						 PUNK_NO_ATTR = 299 } punc_attr_type;
+						 PUNC_NO_ATTR = 299 } punc_attr_type;
 
 // All token classes are subclasses of Token
 class PuncToken : public Token
