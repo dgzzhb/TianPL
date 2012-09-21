@@ -19,7 +19,7 @@ typedef enum punc_attr { PUNC_SEMI = 200,
 						 PUNC_ASSIGN = 203,
 						 PUNC_OPEN = 204,
 						 PUNC_CLOSE = 205,
-						 PUNK_NO_ATTR = 206 } punc_attr_type;
+						 PUNK_NO_ATTR = 299 } punc_attr_type;
 
 // All token classes are subclasses of Token
 class PuncToken : public Token
@@ -48,4 +48,4 @@ class PuncToken : public Token
 		punc_attr_type attribute;
 };
 
-#endif /* PUNCTOKEN_H_ */
+#endif /* PUNCTOKEN_H */

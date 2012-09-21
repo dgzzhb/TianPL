@@ -5,10 +5,28 @@
  *      Author: Tian
  */
 
-#ifndef EOFTOKEN_H_
-#define EOFTOKEN_H_
+#ifndef EOFTOKEN_H
+#define EOFTOKEN_H
 
+using namespace std;
 
+#include "token.h"
+#include <string>
 
+class EofToken : public Token
+{
+	public:
+		EofToken();
+		EofToken(string *attr);
+		~EofToken();
 
-#endif /* EOFTOKEN_H_ */
+		string *get_attribute();
+		void set_attribute(string *attr);
+
+		string *to_string();
+
+	private:
+		string *attribute;
+};
+
+#endif /* EOFTOKEN_H */
