@@ -43,10 +43,10 @@ OBJECTFILES= \
 	${OBJECTDIR}/muloptoken.o \
 	${OBJECTDIR}/punctoken.o \
 	${OBJECTDIR}/eoftoken.o \
-	${OBJECTDIR}/token.o \
-	${OBJECTDIR}/idtoken.o \
 	${OBJECTDIR}/test_scanner.o \
-	${OBJECTDIR}/addoptoken.o
+	${OBJECTDIR}/addoptoken.o \
+	${OBJECTDIR}/token.o \
+	${OBJECTDIR}/idtoken.o
 
 
 # C Compiler Flags
@@ -113,16 +113,6 @@ ${OBJECTDIR}/eoftoken.o: eoftoken.cc
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/eoftoken.o eoftoken.cc
 
-${OBJECTDIR}/token.o: token.cc 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/token.o token.cc
-
-${OBJECTDIR}/idtoken.o: idtoken.cc 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/idtoken.o idtoken.cc
-
 ${OBJECTDIR}/test_scanner.o: test_scanner.cc 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
@@ -132,6 +122,16 @@ ${OBJECTDIR}/addoptoken.o: addoptoken.cc
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/addoptoken.o addoptoken.cc
+
+${OBJECTDIR}/token.o: token.cc 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/token.o token.cc
+
+${OBJECTDIR}/idtoken.o: idtoken.cc 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/idtoken.o idtoken.cc
 
 # Subprojects
 .build-subprojects:

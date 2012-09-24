@@ -41,15 +41,15 @@ class Buffer
   
  private:
   // Storage for the buffer
-  list<char> *b;
+  list<char> b;
   
-  ifstream *source_file;
+  ifstream source_file;
   
   // Print an error message and die.
   void buffer_fatal_error();
   
   /* Fill the buffer from the file.  The buffer filling code is
-     where all the action happens in this calss.  This function
+     where all the action happens in this class.  This function
      is responsible for filling the buffer until it is full with
      characters from the file.  Comments should be omitted,
      whitespace should be compressed to a single space character,
